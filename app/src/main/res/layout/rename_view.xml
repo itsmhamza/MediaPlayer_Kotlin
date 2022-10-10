@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_baseline_edit_24"
+            app:startIconTint="@color/selection_color"
+            app:boxStrokeColor="@color/line_color"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginHorizontal="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/rename_field"
+                android:textColor="@color/text_color"
+                android:layout_height="match_parent"
+                android:maxLength="25"
+                android:inputType="textAutoComplete"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>

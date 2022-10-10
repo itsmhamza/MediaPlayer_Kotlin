@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:title="Themes"
+        android:id="@+id/themes"
+        android:icon="@drawable/ic_theme_selection"
+        app:showAsAction="always"/>
+
+    <item android:title="Videos"
+        android:id="@+id/video"
+        android:icon="@drawable/ic_video__selection"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_selection"
+        app:showAsAction="always"/>
+
+    <item android:title="Songs"
+        android:id="@+id/music"
+        android:icon="@drawable/ic_music_selection"
+        app:showAsAction="always"/>
+
+    <item android:title="Settings"
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_setting_selection"
+        app:showAsAction="always"/>
+</menu>

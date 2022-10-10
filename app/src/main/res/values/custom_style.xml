@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Curved">
+        <item name="cornerSize">24%</item>
+    </style>
+    <style name="Curved2">
+        <item name="cornerSize">@dimen/_5sdp</item>
+    </style>
+</resources>

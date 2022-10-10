@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF000000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    //custom colors
+    <color name="search_bar">#424688</color>
+    <color name="bg_color">#1D1F3E</color>
+    <color name="bg_color2">#101122</color>
+    <color name="selection_color">#EB41FD</color>
+    <color name="line_color">#BDB5F9</color>
+    <color name="text_color">#B3ACF3</color>
+    <color name="select_icon">#AAB0FB</color>
+    <color name="folder_box">#E7E6F6</color>
+    <color name="folder_outline">#7566ED</color>
+    <color name="video_outline">#E4E1F8</color>
+    <color name="white_s">#FFFFFFFF</color>
+
+
+</resources>

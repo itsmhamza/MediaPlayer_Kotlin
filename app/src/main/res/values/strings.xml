@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Media Player Classic Cinema</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Videos">video</string>
+    <string name="View_all">View All</string>
+</resources>

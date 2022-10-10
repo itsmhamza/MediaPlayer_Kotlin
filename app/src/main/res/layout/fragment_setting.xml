@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_pause_b"
+                app:shapeAppearanceOverlay="@style/Curved" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Show media name"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Show media title in media list"
+                android:textColor="@color/text_color"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchmedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:thumbTint="@color/selection_color"
+                app:trackTint="@color/text_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/privacy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:backgroundTint="@android:color/transparent"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_auto_bplay"
+                app:shapeAppearanceOverlay="@style/Curved" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Privacy"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="All rights reserved"
+                android:textColor="@color/text_color"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/materialCardView3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rateus"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_auto_popup"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:shapeAppearanceOverlay="@style/Curved" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Auto Popup Play"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Continue playing video in floating window when exit"
+                android:textColor="@color/text_color"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:thumbTint="@color/selection_color"
+                app:trackTint="@color/text_color" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rateus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_double_tab"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:shapeAppearanceOverlay="@style/Curved" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Double tap to seek"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="10 s"
+                android:textColor="@color/text_color"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_double"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:thumbTint="@color/selection_color"
+                app:trackTint="@color/text_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_default_sc"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:shapeAppearanceOverlay="@style/Curved" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Default Screen Orientation"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/oritentation"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Potrait"
+                android:textColor="@color/text_color"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:thumbTint="@color/selection_color"
+                app:trackTint="@color/text_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:scrollbars="vertical"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView3"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_rate_bu"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:shapeAppearanceOverlay="@style/Curved" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Rate Us"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Rate us on Google Play Store"
+                android:textColor="@color/text_color"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_gesture_b"
+                app:shapeAppearanceOverlay="@style/Curved" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Gesture Operation"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingHorizontal="5dp"
+                android:text="Control player by hand gesture"
+                android:textColor="@color/text_color"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchgesture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:thumbTint="@color/selection_color"
+                app:trackTint="@color/text_color" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

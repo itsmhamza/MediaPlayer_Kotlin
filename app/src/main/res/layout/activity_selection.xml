@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_color">
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="2dp">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/back_selection"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_back_b"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_margin="@dimen/_5sdp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_selection"
+            android:layout_width="match_parent"
+            android:theme="@style/searchview"
+            android:layout_height="50dp"
+            app:queryHint="Search Song"
+            app:searchIcon="@drawable/ic_baseline_search_24"
+            android:focusable="false"
+            app:iconifiedByDefault="false"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/custom_search_view"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selection_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingBottom="100dp"
+        android:scrollbarThumbVertical="@drawable/scroll_bar"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

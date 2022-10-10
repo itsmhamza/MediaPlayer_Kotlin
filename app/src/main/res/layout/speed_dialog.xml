@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/line_color">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/minus"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_baseline_minimize_24"
+        android:tint="@color/white" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Speed"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/speedtext"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:id="@+id/plus"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="@color/white"/>
+</LinearLayout>

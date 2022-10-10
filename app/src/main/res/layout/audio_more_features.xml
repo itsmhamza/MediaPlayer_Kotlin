@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color">
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:iconTint="@color/selection_color"
+        app:icon="@drawable/ic_baseline_info_24"
+        android:text="Info"
+        android:id="@+id/details"
+        app:iconGravity="top"
+        android:background="?attr/selectableItemBackground"
+        android:backgroundTint="@android:color/transparent"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+</LinearLayout>

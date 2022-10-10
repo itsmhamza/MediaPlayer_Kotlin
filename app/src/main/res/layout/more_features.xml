@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_musicb"
+            android:text="Audio Track"
+            app:iconTint="@color/white"
+            android:textColor="@color/white"
+            app:iconGravity="top"
+            android:clickable="true"
+            android:focusable="true"
+            android:textSize="@dimen/_10sdp"
+            android:id="@+id/audio_track"
+            android:backgroundTint="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_baseline_subtitles_24"
+            android:text="Subtitle"
+            app:iconGravity="top"
+            app:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textSize="@dimen/_10sdp"
+            android:focusable="true"
+            android:id="@+id/subtitles"
+            android:backgroundTint="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_speed_b"
+            android:text="Speed"
+            android:id="@+id/speed"
+            app:iconGravity="top"
+            android:textSize="@dimen/_10sdp"
+            app:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_mini_b"
+            android:text="PIP Mode"
+            app:iconGravity="top"
+            android:id="@+id/pip"
+            app:iconTint="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    </LinearLayout>
+
+</LinearLayout>
