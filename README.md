@@ -10,7 +10,7 @@ This is a simple media player application that allows users to play both audio a
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/mediaplayer.git`
+1. Clone the repository: `git clone https://github.com/itsmhamza/Media-Player.git`
 2. Navigate to the project directory: `cd mediaplayer`
 3. Install the dependencies: `npm install`
 
