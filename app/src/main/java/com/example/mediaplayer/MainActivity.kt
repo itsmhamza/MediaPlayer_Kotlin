@@ -19,7 +19,6 @@ import com.example.mediaplayer.fragments.Music.*
 import com.example.mediaplayer.fragments.Setting
 import com.example.mediaplayer.fragments.Video.Video
 import com.example.mediaplayer.fragments.Video.VideoRAdopter
-import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.common.reflect.TypeToken
 import com.google.gson.GsonBuilder
 
@@ -56,7 +55,6 @@ class MainActivity : AppCompatActivity() {
             playlists.musicPlaylist =dataplaylist
         }
         splashActivity.ads = true
-        NativeAd().ADmodADsSmall(this ,this,binding.shimmerlayout,binding.frame)
         val pref = this.getSharedPreferences("smartbar", Context.MODE_PRIVATE)
         binding.bottomNavigationView.setSelectedItemId(id.home)
         setSupportActionBar(binding.toolbar)
@@ -93,10 +91,8 @@ class MainActivity : AppCompatActivity() {
                         MusicActivity.isplaying=false
                     }
                 }
-                InterstialAdsCall.getInstance().showInterstitialAdNew(this)
                 count = 0
             }
-            NativeAd().ADmodADsSmall(this, this,binding.shimmerlayout,binding.frame)
             return@setOnItemSelectedListener true
         }
     }
@@ -191,10 +187,7 @@ class MainActivity : AppCompatActivity() {
         val exitApp = back_pressdialog.findViewById<TextView>(R.id.exitbtn)
         val notNow = back_pressdialog.findViewById<TextView>(R.id.notnowbtn)
         val rateIt = back_pressdialog.findViewById<TextView>(R.id.ratebtn)
-        val shimmer = back_pressdialog.findViewById<ShimmerFrameLayout>(R.id.shimmerlayouts)
-        val frame = back_pressdialog.findViewById<FrameLayout>(R.id.framesss)
         back_pressdialog.show()
-        NativeAd().ADmodADs(this,this,shimmer,frame)
         notNow.setOnClickListener {
             back_pressdialog.dismiss()
         }

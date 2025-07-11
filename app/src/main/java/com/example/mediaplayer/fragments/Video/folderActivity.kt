@@ -19,7 +19,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mediaplayer.Data.video
 import com.example.mediaplayer.MainActivity
-import com.example.mediaplayer.NativeAd
 import com.example.mediaplayer.R
 import com.example.mediaplayer.Themes.Themes
 import com.example.mediaplayer.databinding.ActivityFolderBinding
@@ -43,8 +42,6 @@ class folderActivity() : AppCompatActivity() ,onItemRename{
         binding = ActivityFolderBinding.inflate(layoutInflater)
         setContentView(binding.root)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-      //  loadcustomads()
-        NativeAd().ADmodADsSmall(this, this,binding.shimmerlayout,binding.frame)
         val pref = this.getSharedPreferences("smartbar", Context.MODE_PRIVATE)
         MainActivity.currenttheme = pref?.getString("theme", "0").toString()
         setthemeActivity()
@@ -210,10 +207,10 @@ class folderActivity() : AppCompatActivity() ,onItemRename{
         bindingRF.renameField.setText(Video.videoList[position].title)
         dialogRF.show()
         dialogRF.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(
-            MaterialColors.getColor(this,R.attr.useMaterialThemeColors,
+            MaterialColors.getColor(this,com.google.android.material.R.attr.useMaterialThemeColors,
             Color.TRANSPARENT))
         dialogRF.getButton(AlertDialog.BUTTON_NEGATIVE).setBackgroundColor(
-            MaterialColors.getColor(this,R.attr.useMaterialThemeColors,
+            MaterialColors.getColor(this,com.google.android.material.R.attr.useMaterialThemeColors,
             Color.TRANSPARENT))
     }
     private fun updateRenameUI(position: Int, newName: String, newFile: File) {

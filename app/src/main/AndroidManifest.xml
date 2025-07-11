@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.mediaplayer">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission
@@ -21,7 +20,8 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/ic_vid"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        tools:ignore="MissingClass">
         <activity
             android:name=".Emptyactivity"
             android:exported="true"
@@ -43,12 +43,6 @@
                 android:resource="@xml/file_path" />
         </provider>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/app_id" />
-        <meta-data
-            android:name="applovin.sdk.key"
-            android:value="G9L7ZUm3Vei0ktcrTrIffwRNL61VdaTCXXBgTOy-ZTfu-Wv_aqV5gXJZVVasETX-2vfvl5CNIA9oeJoSyAzpKX" />
 
         <activity
             android:name=".splashActivity"

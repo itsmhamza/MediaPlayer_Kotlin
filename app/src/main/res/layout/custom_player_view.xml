@@ -10,9 +10,9 @@
 
     <com.google.android.exoplayer2.ui.DefaultTimeBar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@id/exo_progress"
+        android:id="@+id/exo_progress"
         app:scrubber_drawable="@drawable/ic_videobar_ic"
         app:played_color="@color/selection_color"
         app:unplayed_color="#80FFFFFF"

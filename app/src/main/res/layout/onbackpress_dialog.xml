@@ -23,21 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt"
         android:id="@+id/framess">
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/shimmerlayouts"
-            tools:ignore="MissingConstraints">
-            <include layout="@layout/nativead_shimmer">
-            </include>
-        </com.facebook.shimmer.ShimmerFrameLayout>
-        <FrameLayout
-            android:id="@+id/framesss"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:layout="@layout/nativead"
-            tools:ignore="MissingConstraints">
-        </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/exitbtn"

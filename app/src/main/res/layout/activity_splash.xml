@@ -7,27 +7,20 @@
     tools:context=".splashActivity"
     android:background="@drawable/splsh">
 
-    <com.facebook.shimmer.ShimmerFrameLayout
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/shimmerlayout"
+        android:src="@drawable/splash_background"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/progres"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="visible">
-        <include layout="@layout/nativead_shimmer"
-            android:visibility="visible">
-        </include>
-    </com.facebook.shimmer.ShimmerFrameLayout>
-    <FrameLayout
-        android:id="@+id/frame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/nativead">
-    </FrameLayout>
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp" />
+
 
     <ImageView
         android:id="@+id/start"

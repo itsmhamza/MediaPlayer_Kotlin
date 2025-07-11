@@ -53,9 +53,7 @@
         android:layout_height="@dimen/_135sdp"
         android:scrollbarThumbVertical="@drawable/scroll_bar"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarf"
         app:layout_constraintVertical_bias="0.0" />

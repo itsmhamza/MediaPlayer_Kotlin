@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mediaplayer.Data.List_themes
 import com.example.mediaplayer.Data.Themes
-import com.example.mediaplayer.InterstialAdsCall
 import com.example.mediaplayer.MainActivity
 import com.example.mediaplayer.MusicActivity
 import com.example.mediaplayer.databinding.FragmentThemesBinding
@@ -89,7 +88,6 @@ class Themes : Fragment() {
             val intent = Intent(this.requireContext(), MainActivity::class.java)
             startActivity(intent)
             activity?.finish()
-            InterstialAdsCall.getInstance().showInterstitialAdNew(requireActivity())
         }
     }
     private fun vibrate() {

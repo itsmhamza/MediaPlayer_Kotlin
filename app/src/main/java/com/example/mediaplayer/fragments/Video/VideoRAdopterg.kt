@@ -126,7 +126,7 @@ class VideoRAdopterg(private val content:Context,
                     .bold { append("\n\nFile Size: ") }.append(Formatter.formatShortFileSize(content,videolist[position].size.toLong()))
                     .bold { append("\n\nLocation: ") }.append(videolist[position].path)
                 bindingIF.detailtv.text = infoText
-                dialogIF.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(MaterialColors.getColor(content,R.attr.useMaterialThemeColors,
+                dialogIF.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(MaterialColors.getColor(content,com.google.android.material.R.attr.useMaterialThemeColors,
                     Color.TRANSPARENT))
             }
             bindingMF.delete.setOnClickListener {
@@ -286,9 +286,9 @@ class VideoRAdopterg(private val content:Context,
         }
         bindingRF.renameField.text = SpannableStringBuilder(videolist[position].title)
         dialogRF.show()
-        dialogRF.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(MaterialColors.getColor(content,R.attr.useMaterialThemeColors,
+        dialogRF.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(MaterialColors.getColor(content,com.google.android.material.R.attr.useMaterialThemeColors,
             Color.TRANSPARENT))
-        dialogRF.getButton(AlertDialog.BUTTON_NEGATIVE).setBackgroundColor(MaterialColors.getColor(content,R.attr.useMaterialThemeColors,
+        dialogRF.getButton(AlertDialog.BUTTON_NEGATIVE).setBackgroundColor(MaterialColors.getColor(content,com.google.android.material.R.attr.useMaterialThemeColors,
             Color.TRANSPARENT))
     }
     private fun updateRenameUI(position: Int, newName: String, newFile: File){

@@ -19,7 +19,6 @@
         <ImageView
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
-            android:src="@drawable/admob_close_button_black_circle_white_cross"
             app:tint="@color/white" />
         <View
             android:layout_width="@dimen/_10sdp"

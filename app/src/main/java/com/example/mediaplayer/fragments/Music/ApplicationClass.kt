@@ -5,8 +5,6 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
 import android.util.Log
-import com.applovin.sdk.AppLovinSdk
-import com.google.android.gms.ads.MobileAds
 
 class ApplicationClass: Application() {
     companion object{
@@ -24,15 +22,5 @@ class ApplicationClass: Application() {
             val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(notificationChannel)
         }
-        MobileAds.initialize(this){
-            Log.d("tag", "MobileAds init ")
-        }
-        AppOpenManager(this)
-        AppLovinSdk.getInstance( this ).mediationProvider = "max"
-        AppLovinSdk.getInstance( this ).initializeSdk {
-
-        }
-      //  AppLovinSdk.getInstance(this).settings.testDeviceAdvertisingIds = arrayListOf("3150311b-06c8-41c1-adc2-21082038149e","3c31b5ab-efd1-488b-b18e-db4b116fcfd6")
-
     }
 }

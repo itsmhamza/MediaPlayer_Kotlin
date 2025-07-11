@@ -19,7 +19,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.example.mediaplayer.databinding.ActivityPermissionDialogBinding
 import com.example.mediaplayer.databinding.ActivitySplashBinding
-import com.google.android.gms.ads.MobileAds
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
@@ -41,9 +40,6 @@ class splashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ads = false
-        InterstialAdsCall.getInstance().loadInterstitialAd(this)
-        MobileAds.initialize(this)
-        NativeAd().ADmodADs(this, this,binding.shimmerlayout,binding.frame)
         Handler().postDelayed({
             binding.progres.visibility = View.GONE
             binding.start.visibility =  View.VISIBLE
@@ -71,7 +67,6 @@ class splashActivity : AppCompatActivity() {
                     Handler().postDelayed({
                         startActivity(intent)
                         finish()
-                        InterstialAdsCall.getInstance().showInterstitialAdNew(this@splashActivity)
                     },1000)
 
                     // permission is granted, open the camera

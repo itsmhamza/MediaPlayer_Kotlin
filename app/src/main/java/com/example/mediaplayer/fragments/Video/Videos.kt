@@ -250,10 +250,10 @@ class videos : Fragment(), onItemRename {
         bindingRF.renameField.setText(Video.videoList[position].title)
         dialogRF.show()
         dialogRF.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(
-            MaterialColors.getColor(requireContext(),R.attr.useMaterialThemeColors,
+            MaterialColors.getColor(requireContext(),com.google.android.material.R.attr.useMaterialThemeColors,
             Color.TRANSPARENT))
         dialogRF.getButton(AlertDialog.BUTTON_NEGATIVE).setBackgroundColor(
-            MaterialColors.getColor(requireContext(),R.attr.useMaterialThemeColors,
+            MaterialColors.getColor(requireContext(),com.google.android.material.R.attr.useMaterialThemeColors,
             Color.TRANSPARENT))
     }
     private fun updateRenameUI(position: Int, newName: String, newFile: File){

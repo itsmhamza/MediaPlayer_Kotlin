@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.Video.videos"
-    android:id="@+id/drawerlayoutaa"
-    android:paddingBottom="@dimen/_50sdp">
+    android:id="@+id/drawerlayoutaa">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -32,10 +31,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/video_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/_110sdp"
-        android:paddingStart="@dimen/_5sdp"
-        android:paddingEnd="@dimen/_5sdp"
+        android:layout_height="0dp"
         android:scrollbarThumbVertical="@drawable/scroll_bar"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

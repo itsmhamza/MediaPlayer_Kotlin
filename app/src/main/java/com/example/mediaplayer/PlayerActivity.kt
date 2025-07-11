@@ -38,6 +38,7 @@ import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.google.android.exoplayer2.ui.DefaultTimeBar
+import com.google.android.exoplayer2.ui.PlayerControlView
 import com.google.android.exoplayer2.ui.TimeBar
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -155,7 +156,9 @@ class PlayerActivity : AppCompatActivity(),GestureDetector.OnGestureListener,
             }
         }
     }
-    @SuppressLint("SetTextI18n", "ClickableViewAccessibility", "ResourceType")
+    @SuppressLint("SetTextI18n", "ClickableViewAccessibility", "ResourceType",
+        "SuspiciousIndentation"
+    )
     private fun intialzingBinding(){
         val status =  this.getSharedPreferences("tap",Context.MODE_PRIVATE)
             ?.getBoolean("status2",true)
@@ -530,86 +533,45 @@ class PlayerActivity : AppCompatActivity(),GestureDetector.OnGestureListener,
 
     override fun onPictureInPictureModeChanged(
         isInPictureInPictureMode: Boolean,
-        newConfig: Configuration?
+        newConfig: Configuration
     ) {
-        if(pipstatus !=0){
+        super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
+
+        if (pipstatus != 0) {
             finish()
-            val intent= Intent(this, PlayerActivity::class.java)
-            when(pipstatus){
-                1->intent.putExtra("class","folderActivity")
-                2->intent.putExtra("class","SearchedVideo")
-                3->intent.putExtra("class","AllVideos")
+            val intent = Intent(this, PlayerActivity::class.java)
+            when (pipstatus) {
+                1 -> intent.putExtra("class", "folderActivity")
+                2 -> intent.putExtra("class", "SearchedVideo")
+                3 -> intent.putExtra("class", "AllVideos")
             }
             startActivity(intent)
         }
-        if(!isInPictureInPictureMode) pausevideo()
 
+        if (!isInPictureInPictureMode) pausevideo()
     }
-    private fun seekbarFeature(){
-            findViewById<DefaultTimeBar>(R.id.exo_progress).addListener(object :TimeBar.OnScrubListener{
-                override fun onScrubStart(timeBar: TimeBar, position: Long) {
-                    pausevideo()
-                }
-                override fun onScrubMove(timeBar: TimeBar, position: Long) {
-                    player.seekTo(position)
-                }
-                override fun onScrubStop(timeBar: TimeBar, position: Long, canceled: Boolean) {
-                    playvideo()
-                }
 
-            })
-    }
-    override fun onDown(e: MotionEvent?): Boolean = false
 
-    override fun onShowPress(e: MotionEvent?) = Unit
 
-    override fun onSingleTapUp(e: MotionEvent?): Boolean = false
+    private fun seekbarFeature() {
+        val timeBar = binding.playerView.findViewById<DefaultTimeBar>(R.id.exo_progress)
 
-    override fun onScroll(
-        event: MotionEvent?,
-        e1: MotionEvent?,
-        distanceX: Float,
-        distanceY: Float
-    ): Boolean {
-        val screenwidth = Resources.getSystem().displayMetrics.widthPixels
-//        val screenheight = Resources.getSystem().displayMetrics.heightPixels
-//        val border = 100 * Resources.getSystem().displayMetrics.density.toInt()
-//        if (event!!.x < border || event!!.y < border || event.x > screenwidth -border || event.y > screenheight-border)
-//            return false
-        if (gesture) {
-            gesture = true
-            if (abs(distanceX) < abs(distanceY)) {
-                if (event!!.x < screenwidth / 2) {
-                    binding.brigthness.visibility = View.VISIBLE
-                    binding.volume.visibility = View.GONE
-                    val increse = distanceY > 0
-                    val value = if (increse) brightness + 1 else brightness - 1
-                    if (value in 0..30) brightness = value
-                    binding.brigthness.text = brightness.toString()
-                    screenbrightness(brightness)
-                } else {
-                    binding.brigthness.visibility = View.GONE
-                    binding.volume.visibility = View.VISIBLE
-                    val maxvolume = audioManager!!.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
-                    val increse = distanceY > 0
-                    val value = if (increse) volume + 1 else volume - 1
-                    if (value in 0..maxvolume) volume = value
-                    binding.volume.text = volume.toString()
-                    audioManager!!.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0)
-                }
+        timeBar.addListener(object : TimeBar.OnScrubListener {
+            override fun onScrubStart(timeBar: TimeBar, position: Long) {
+                pausevideo()
             }
-        }
-        return true
+
+            override fun onScrubMove(timeBar: TimeBar, position: Long) {
+                player.seekTo(position)
+            }
+
+            override fun onScrubStop(timeBar: TimeBar, position: Long, canceled: Boolean) {
+                playvideo()
+            }
+        })
     }
 
-    override fun onLongPress(e: MotionEvent?) = Unit
 
-    override fun onFling(
-        e1: MotionEvent?,
-        e2: MotionEvent?,
-        velocityX: Float,
-        velocityY: Float
-    ): Boolean = false
     private fun screenbrightness(value:Int){
 
         val d = 1.0f/30
@@ -648,5 +610,47 @@ class PlayerActivity : AppCompatActivity(),GestureDetector.OnGestureListener,
     override fun onAudioFocusChange(focusChange: Int) {
         if (focusChange<=0) pausevideo()
     }
+
+    override fun onDown(p0: MotionEvent): Boolean = false
+
+    override fun onFling(p0: MotionEvent?, p1: MotionEvent, p2: Float, p3: Float) : Boolean = false
+
+    override fun onLongPress(p0: MotionEvent) = Unit
+
+    override fun onScroll(p0: MotionEvent?, p1: MotionEvent, p2: Float, p3: Float): Boolean {
+        val screenwidth = Resources.getSystem().displayMetrics.widthPixels
+//        val screenheight = Resources.getSystem().displayMetrics.heightPixels
+//        val border = 100 * Resources.getSystem().displayMetrics.density.toInt()
+//        if (event!!.x < border || event!!.y < border || event.x > screenwidth -border || event.y > screenheight-border)
+//            return false
+        if (gesture) {
+            gesture = true
+            if (abs(p2) < abs(p3)) {
+                if (p0!!.x < screenwidth / 2) {
+                    binding.brigthness.visibility = View.VISIBLE
+                    binding.volume.visibility = View.GONE
+                    val increse = p3 > 0
+                    val value = if (increse) brightness + 1 else brightness - 1
+                    if (value in 0..30) brightness = value
+                    binding.brigthness.text = brightness.toString()
+                    screenbrightness(brightness)
+                } else {
+                    binding.brigthness.visibility = View.GONE
+                    binding.volume.visibility = View.VISIBLE
+                    val maxvolume = audioManager!!.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
+                    val increse = p3 > 0
+                    val value = if (increse) volume + 1 else volume - 1
+                    if (value in 0..maxvolume) volume = value
+                    binding.volume.text = volume.toString()
+                    audioManager!!.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0)
+                }
+            }
+        }
+        return true
+    }
+
+    override fun onShowPress(p0: MotionEvent) = Unit
+
+    override fun onSingleTapUp(p0: MotionEvent): Boolean = false
 
 }

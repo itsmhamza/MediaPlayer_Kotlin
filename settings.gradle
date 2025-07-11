@@ -1,10 +1,17 @@
+pluginManagement {
+    repositories {
+        google()         // ✅ Required for Android Gradle Plugin
+        mavenCentral()   // ✅ Fallback repo
+    }
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
     }
 }
+
 rootProject.name = "Media Player"
-include ':app'
+include(":app")

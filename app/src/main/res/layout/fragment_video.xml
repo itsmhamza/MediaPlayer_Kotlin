@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".fragments.Video.Video"
-    android:id="@+id/drawerlayout"
-    android:paddingTop="@dimen/_90sdp">
+    android:id="@+id/drawerlayout">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"

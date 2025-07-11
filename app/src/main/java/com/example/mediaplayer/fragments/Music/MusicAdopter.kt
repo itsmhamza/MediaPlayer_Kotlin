@@ -77,7 +77,7 @@ val selectionActivity:Boolean=false):RecyclerView.Adapter<MusicAdopter.MyHolder>
                     .bold { append("\n\nLocation: ") }.append(musicList[position].path)
                 bindingIF.detailtv.text = infoText
                 dialogIF.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(
-                    MaterialColors.getColor(context,R.attr.useMaterialThemeColors,
+                    MaterialColors.getColor(context,com.google.android.material.R.attr.useMaterialThemeColors,
                     Color.BLACK))
             }
 
@@ -102,7 +102,7 @@ val selectionActivity:Boolean=false):RecyclerView.Adapter<MusicAdopter.MyHolder>
                            )
                            Handler().postDelayed({
                                holder.root.setBackgroundColor(
-                                   MaterialColors.getColor(context,R.attr.useMaterialThemeColors,
+                                   MaterialColors.getColor(context,com.google.android.material.R.attr.useMaterialThemeColors,
                                        Color.TRANSPARENT))
                            },500)
                            Toast.makeText(context, "Added to Playlist", Toast.LENGTH_SHORT).show()
@@ -117,7 +117,7 @@ val selectionActivity:Boolean=false):RecyclerView.Adapter<MusicAdopter.MyHolder>
                            )
                            Handler().postDelayed({
                                holder.root.setBackgroundColor(
-                                   MaterialColors.getColor(context,R.attr.useMaterialThemeColors,
+                                   MaterialColors.getColor(context,com.google.android.material.R.attr.useMaterialThemeColors,
                                        Color.TRANSPARENT))
                            },500)
                            Toast.makeText(context, "Removed from Playlist", Toast.LENGTH_SHORT).show()
